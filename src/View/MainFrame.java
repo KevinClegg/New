@@ -20,9 +20,16 @@ import java.awt.Dimension;
 public class MainFrame extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
+	private JButton btnNewButton_1;
+	private JButton btnNewButton;
+	private JButton btnNewButton_2;
+	private JButton btnNewButton_3;
+	private JButton btnNewButton_5;
+	private JButton btnNewButton_4;
+	private JButton btnNewButton_6;
+	private JButton btnNewButton_7;
 
 	/**
 	 * Create the frame.
@@ -42,7 +49,7 @@ public class MainFrame extends JFrame {
 		// Tabs erstellt 
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		contentPane.add(tabbedPane, BorderLayout.CENTER);
+		contentPane.add(tabbedPane, BorderLayout.NORTH);
 		
 		
 		// Erstes Panel = Erster Tab (4 Buttons / 1 Textfeld)
@@ -59,7 +66,7 @@ public class MainFrame extends JFrame {
 		
 		// Add Button -> erster Tab
 		
-		JButton btnNewButton_1 = new JButton("Add+");
+		btnNewButton_1 = new JButton("Add+");
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
 		gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 5);
 		gbc_btnNewButton_1.gridx = 0;
@@ -68,7 +75,7 @@ public class MainFrame extends JFrame {
 		
 		//Button Verwerfen -> erster Tab 
 		
-		JButton btnNewButton = new JButton("Verwerfen");
+		btnNewButton = new JButton("Verwerfen");
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
 		gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
 		gbc_btnNewButton.gridx = 1;
@@ -88,7 +95,7 @@ public class MainFrame extends JFrame {
 		
 		//Neu Button -> erster Tab
 		
-		JButton btnNewButton_2 = new JButton("Neu");
+		btnNewButton_2 = new JButton("Neu");
 		GridBagConstraints gbc_btnNewButton_2 = new GridBagConstraints();
 		gbc_btnNewButton_2.insets = new Insets(0, 0, 5, 0);
 		gbc_btnNewButton_2.gridx = 2;
@@ -97,7 +104,7 @@ public class MainFrame extends JFrame {
 		
 		// Fertigstellen Button -> erster Tab
 		
-		JButton btnNewButton_3 = new JButton("Fertigstellen");
+		btnNewButton_3 = new JButton("Fertigstellen");
 		btnNewButton_3.setSize(700,700);
 		GridBagConstraints gbc_btnNewButton_3 = new GridBagConstraints();
 		gbc_btnNewButton_3.insets = new Insets(0, 0, 5, 0);
@@ -118,7 +125,7 @@ public class MainFrame extends JFrame {
 		
 		// Add Button -> zweiter Tab
 		
-		JButton btnNewButton_5 = new JButton("Add+");
+		btnNewButton_5 = new JButton("Add+");
 		GridBagConstraints gbc_btnNewButton_5 = new GridBagConstraints();
 		gbc_btnNewButton_5.insets = new Insets(0, 0, 5, 5);
 		gbc_btnNewButton_5.gridx = 0;
@@ -127,12 +134,14 @@ public class MainFrame extends JFrame {
 		
 		//Button Verwerfen -> zweiter Tab 
 		
-		JButton btnNewButton_4 = new JButton("Verwerfen");
+		btnNewButton_4 = new JButton("Verwerfen");
 		GridBagConstraints gbc_btnNewButton_4 = new GridBagConstraints();
 		gbc_btnNewButton_4.insets = new Insets(0, 0, 5, 5);
 		gbc_btnNewButton_4.gridx = 1;
 		gbc_btnNewButton_4.gridy = 0;
 		panel_1.add(btnNewButton_4, gbc_btnNewButton_4);
+		
+		//Zweites Textfeld -> Zweiter Tab
 		
 		textField_2 = new JTextField();
 		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
@@ -143,27 +152,115 @@ public class MainFrame extends JFrame {
 		panel_1.add(textField_2, gbc_textField_2);
 		textField_2.setColumns(10);
 		
-		JButton btnNewButton_6 = new JButton("Neu");
-		btnNewButton_6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton_6.setMinimumSize(new Dimension(91, 23));
-		btnNewButton_6.setMaximumSize(new Dimension(91, 23));
+		//Button Neu -> Zweiter Tab
+		
+		btnNewButton_6 = new JButton("Neu");
 		GridBagConstraints gbc_btnNewButton_6 = new GridBagConstraints();
 		gbc_btnNewButton_6.insets = new Insets(0, 0, 5, 0);
 		gbc_btnNewButton_6.gridx = 2;
 		gbc_btnNewButton_6.gridy = 3;
 		panel_1.add(btnNewButton_6, gbc_btnNewButton_6);
 		
-		JButton btnNewButton_7 = new JButton("Fertigstellen");
+		//Button Fertigstellen -> Zweiter Tab
+		
+		btnNewButton_7 = new JButton("Fertigstellen");
 		GridBagConstraints gbc_btnNewButton_7 = new GridBagConstraints();
 		gbc_btnNewButton_7.insets = new Insets(0, 0, 5, 0);
 		gbc_btnNewButton_7.gridx = 2;
 		gbc_btnNewButton_7.gridy = 4;
 		panel_1.add(btnNewButton_7, gbc_btnNewButton_7);
 		
-	
+		// Getters und Setters
+		
 	}
+
+	public JPanel getContentPane() {
+		return contentPane;
+	}
+
+	public void setContentPane(JPanel contentPane) {
+		this.contentPane = contentPane;
+	}
+	
+	public JTextField getTextField_1() {
+		return textField_1;
+	}
+
+	public void setTextField_1(JTextField textField_1) {
+		this.textField_1 = textField_1;
+	}
+
+	public JTextField getTextField_2() {
+		return textField_2;
+	}
+
+	public void setTextField_2(JTextField textField_2) {
+		this.textField_2 = textField_2;
+	}
+
+	public  JButton getBtnNewButton_1() {
+		return btnNewButton_1;
+	}
+
+	public void setBtnNewButton_1(JButton btnNewButton_1) {
+		this.btnNewButton_1 = btnNewButton_1;
+	}
+
+	public JButton getBtnNewButton() {
+		return btnNewButton;
+	}
+
+	public void setBtnNewButton(JButton btnNewButton) {
+		this.btnNewButton = btnNewButton;
+	}
+
+	public JButton getBtnNewButton_2() {
+		return btnNewButton_2;
+	}
+
+	public void setBtnNewButton_2(JButton btnNewButton_2) {
+		this.btnNewButton_2 = btnNewButton_2;
+	}
+
+	public JButton getBtnNewButton_3() {
+		return btnNewButton_3;
+	}
+
+	public void setBtnNewButton_3(JButton btnNewButton_3) {
+		this.btnNewButton_3 = btnNewButton_3;
+	}
+
+	public JButton getBtnNewButton_5() {
+		return btnNewButton_5;
+	}
+
+	public void setBtnNewButton_5(JButton btnNewButton_5) {
+		this.btnNewButton_5 = btnNewButton_5;
+	}
+
+	public JButton getBtnNewButton_4() {
+		return btnNewButton_4;
+	}
+
+	public void setBtnNewButton_4(JButton btnNewButton_4) {
+		this.btnNewButton_4 = btnNewButton_4;
+	}
+
+	public JButton getBtnNewButton_6() {
+		return btnNewButton_6;
+	}
+
+	public void setBtnNewButton_6(JButton btnNewButton_6) {
+		this.btnNewButton_6 = btnNewButton_6;
+	}
+
+	public JButton getBtnNewButton_7() {
+		return btnNewButton_7;
+	}
+
+	public void setBtnNewButton_7(JButton btnNewButton_7) {
+		this.btnNewButton_7 = btnNewButton_7;
+	}
+	
 
 }

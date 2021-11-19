@@ -18,7 +18,7 @@ public class ShopAdresseListe {
 		Adresse.add(AdressZeile);
 	}
 	
-	public void ListeLeeren (ShopAdresseListe <ShopAdresse>Adresse) {
+	public void ListeLeeren (ArrayList <ShopAdresse>Adresse) {
 		
 		
 		while(Adresse.size() > 0) {

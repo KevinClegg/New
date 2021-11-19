@@ -7,29 +7,39 @@ public class ShopAdresse {
 	private int Nummer;
 	
 	
+	
+	
+	
+	public ShopAdresse(String shopName, String straﬂe, String pLZ, int nummer) {
+		super();
+		ShopName = shopName;
+		Straﬂe = straﬂe;
+		PLZ = pLZ;
+		Nummer = nummer;
+	}
 	public String getShopName() {
 		return ShopName;
 	}
 	public void setShopName(String shopName) {
-		ShopName = shopName;
+		this.ShopName = shopName;
 	}
 	public String getStraﬂe() {
 		return Straﬂe;
 	}
 	public void setStraﬂe(String straﬂe) {
-		Straﬂe = straﬂe;
+		this.Straﬂe = straﬂe;
 	}
 	public String getPLZ() {
 		return PLZ;
 	}
 	public void setPLZ(String pLZ) {
-		PLZ = pLZ;
+		this.PLZ = pLZ;
 	}
 	public int getNummer() {
 		return Nummer;
 	}
 	public void setNummer(int nummer) {
-		Nummer = nummer;
+		this.Nummer = nummer;
 	}
 	
 	

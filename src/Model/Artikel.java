@@ -5,24 +5,32 @@ public class Artikel {
 	private String Name;
 	private int Preis;
 	
-	
+
+	public Artikel(int menge, String name, int preis) {
+		super();
+		this.Menge = menge;
+		this.Name = name;
+		this.Preis = preis;
+		
+		
+	}
 	public int getMenge() {
 		return Menge;
 	}
 	public void setMenge(int menge) {
-		Menge = menge;
+		this.Menge = menge;
 	}
 	public String getName() {
 		return Name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.Name = name;
 	}
 	public int getPreis() {
 		return Preis;
 	}
 	public void setPreis(int preis) {
-		Preis = preis;
+		this.Preis = preis;
 	}
 	
 	
